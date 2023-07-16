@@ -3,7 +3,7 @@
 
 
 * {
-    margin: 0 auto;
+    margin: auto;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
@@ -13,7 +13,7 @@ section {
     padding: 50px 100px;
 }
 
-.section-title {
+.main-title {
     color: #131313;
     font-size: 3rem;
     font-weight: 700;
@@ -25,6 +25,7 @@ section {
     font-weight: 400;
     margin: 15px 0;
     padding-left:0px;
+    text-align: justify;
 }
 
 .btn-primary {
@@ -37,12 +38,20 @@ section {
     padding: 20px 25px;
     border: 0;
     margin: 15px 0;
+    cursor: pointer;
 }
 
 /* Start Header Nav */
+header{
+    background-color: #ff8f0e42;
+}
+header .logo{
+    font-size: 3rem;
+    color: #FF900E;
+}
 nav {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
     height: 100px;
 }
@@ -58,11 +67,14 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #424242;
-    font-size: 18;
+    color: #FF900E;
+    font-size: 1.2rem;
     font-weight: 500;
+    font-weight: 600;
 }
-
+nav ul li a:hover{
+    color: #e27b04;
+}
 /* Banner Start */
 .banner-container {
     padding: 30px 100px;
@@ -70,7 +82,7 @@ nav ul li a {
 
 .banner-content {
     text-align: center;
-    width: 70%;
+    width: 80%;
 }
 
 .banner-content h1 {
@@ -134,7 +146,7 @@ nav ul li a {
 .right-service {
     width: 40%;
 }
-.left-service > .section-title{
+.left-service > .main-title{
     border-left: 5px solid #FF900E;
     padding-left: 30px;
 }
@@ -201,14 +213,16 @@ nav ul li a {
 }
 
 /* Footer Section */
-footer{
+
+.footer-main{
     background-color: #FF900E;
+    padding: 0 100px;
 
 }
 .footer-top{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     height: 300px;
 }
 .footer-top .section-description{
@@ -258,4 +272,68 @@ footer{
 .copyright p a{
     color: #fff;
     text-decoration: none;
+}
+
+
+/* SMALL DEIVCE RESPONSIVE */
+@media screen and (max-width:576px){
+    .team-image{
+        grid-template-columns: 1fr;
+    }
+    .btn-primary{
+        font-size: 1rem;
+    }
+    nav,
+    .banner-container,
+    .team-container,
+    .card-container,
+    .service-container,
+    .sponsor-image, 
+    .footer-top
+    {
+        flex-direction: column;
+    }
+    .team-container{
+        flex-direction: column-reverse;
+    }
+    nav .menus ul li{
+        margin: 5px;
+    }
+    .service-batch
+    {
+        display: none;
+    }
+    section{
+        padding: 50px 10px;
+    }
+    .banner-container,
+    .footer-main,
+    .box
+    {
+        padding: 10px;
+    }
+    .card, .box{
+        margin: 10px 0px;
+    }
+    .banner-content>.main-title, .main-title, .logo h1{
+        font-size: 1.5rem;
+    }
+    .banner-image,
+    .team-image,
+    .left-service,
+    .right-service,
+    .team-content{
+        width: 90%;
+    }
+    .sponsor-image img{
+        width: 100px;
+        margin-top: 10px;
+    }
+    .sponsor-image{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-top{
+        height: 600px;
+    }
 }
