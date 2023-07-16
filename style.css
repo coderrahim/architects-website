@@ -7,6 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
+    position: relative;
 }
 
 section {
@@ -47,13 +48,20 @@ header{
 }
 header .logo{
     font-size: 3rem;
-    color: #FF900E;
+    color: #ffffff;
 }
 nav {
     display: flex;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     align-items: center;
     height: 100px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 3;
+    background-color: #e27a04a1;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.137);
 }
 
 nav ul {
@@ -67,17 +75,17 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #FF900E;
+    color: #ffffff;
     font-size: 1.2rem;
     font-weight: 500;
     font-weight: 600;
 }
 nav ul li a:hover{
-    color: #e27b04;
+    color: #f3f3f3;
 }
 /* Banner Start */
 .banner-container {
-    padding: 30px 100px;
+    padding: 130px 100px;
 }
 
 .banner-content {
@@ -161,6 +169,7 @@ nav ul li a:hover{
     position: relative;
     margin-left: -50px;
     margin-top: -100px;
+    box-shadow: 0px 4px 20px rgba(54, 54, 54, 0.342);
 }
 .service-batch h1{
     font-size: 4rem;
@@ -178,7 +187,8 @@ nav ul li a:hover{
 .card-container{
     display: flex;
     justify-content: space-between;
-
+    gap: 20px;
+    align-items: center;
 }
 .card{
     border: 1px solid #FF900E;
@@ -186,6 +196,10 @@ nav ul li a:hover{
     padding: 50px 40px;
     text-align: center;
     margin-top: 100px;
+    height: 300px;
+    width: 230px;
+    background-color: white;
+    box-shadow: 4px 4px 10px rgba(128, 128, 128, 0.253);
 
 }
 .card .stars{
@@ -335,5 +349,54 @@ nav ul li a:hover{
     }
     .footer-top{
         height: 600px;
+    }
+}
+
+/* TABLET RESPONSIVE */
+@media screen and (min-width: 577px) and (max-width: 768px){
+    .team-content .quick, .main-title{
+        font-size: 2rem;
+    }
+    .btn-primary{
+        font-size: 1rem;
+    }
+    .service-container{
+        flex-direction: column;
+    }
+    .left-service{
+        width: 100%;
+    }
+    .right-service{
+        width: 400px;
+    }
+    .service-batch{        
+        padding: 20px 0px;    
+        border-radius: 8px;
+        position: relative;
+        margin-left: -50px;
+        margin-top: -50px;
+        width: 250px;
+    }
+    .service-batch h1{
+        font-size: 2rem;
+    }
+    .card-container{
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .sponsor-image{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        flex-wrap: wrap;
+    }
+    .footer-top .logo{
+        width: 30%;
+    }
+    .footer-top .logo p{
+        width: 100%;
+        text-align: left;
+    }
+    .footer-top .main-title{
+        font-size: 1.5rem;
     }
 }
