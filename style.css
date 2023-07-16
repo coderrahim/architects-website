@@ -186,3 +186,15 @@ nav ul li a {
     font-size: 1.25rem;
     font-weight: 600;
 }
+/* Sponsor Section */
+.Sponsor-section{
+    text-align: center;
+}
+.sponsor-image{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.sponsor-image img{
+    margin-top: 50px;
+}
