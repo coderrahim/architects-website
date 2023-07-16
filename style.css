@@ -50,6 +50,9 @@ header .logo{
     font-size: 3rem;
     color: #ffffff;
 }
+.logo a{
+    text-decoration: none;
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -296,6 +299,9 @@ nav ul li a:hover{
     }
     .btn-primary{
         font-size: 1rem;
+    }    
+    .main-title > .quick{
+        font-size: 1.5rem;
     }
     nav,
     .banner-container,
@@ -325,6 +331,9 @@ nav ul li a:hover{
     .box
     {
         padding: 10px;
+    }
+    .banner-container{
+        padding-top: 150px;
     }
     .card, .box{
         margin: 10px 0px;
