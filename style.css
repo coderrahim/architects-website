@@ -1,30 +1,32 @@
 /* Common CSS */
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&family=Work+Sans:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&family=Work+Sans:wght@400;600;700;800&display=swap');
 
 
-*{
+* {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Work Sans', sans-serif;
 }
-section{
+
+section {
     padding: 50px 100px;
 }
 
-.section-title{
+.section-title {
     color: #131313;
     font-size: 3rem;
     font-weight: 700;
 }
 
-.section-description{
+.section-description {
     color: #727272;
     font-size: 1rem;
     font-weight: 400;
     margin: 15px 0;
 }
-.btn-primary{
+
+.btn-primary {
     background-color: #FF900E;
     border-radius: 8px;
     color: #fff;
@@ -35,64 +37,126 @@ section{
     border: 0;
     margin: 15px 0;
 }
+
 /* Start Header Nav */
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100px;
 }
-nav ul{
+
+nav ul {
     display: flex;
 }
-nav ul li{
+
+nav ul li {
     list-style-type: none;
     margin-left: 1rem;
 }
-nav ul li a{
+
+nav ul li a {
     text-decoration: none;
     color: #424242;
     font-size: 18;
     font-weight: 500;
 }
+
 /* Banner Start */
-.banner-container{
+.banner-container {
     padding: 30px 100px;
 }
-.banner-content{
+
+.banner-content {
     text-align: center;
     width: 70%;
 }
-.banner-content h1{
+
+.banner-content h1 {
     font-size: 4rem;
 }
-.banner-image img{
+
+.banner-image img {
     width: 100%;
 }
+
 /* Team SEction */
-.team-container{
+.team-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.team-image{
+
+.team-image {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
     width: 50%;
 }
-.team-image img{
+
+.team-image img {
     width: 100%;
 }
-.team-content{
+
+.team-content {
     width: 50%;
     margin-left: 30px;
 }
-.team-content .quick{
+
+.team-content .quick {
     color: #727272;
     font-size: 3rem;
     font-weight: 500;
 }
-.team-content .text-orange{
+
+.team-content .text-orange {
     color: #FF900E;
+}
+
+/* Service Section */
+.service-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.left-service{
+    width: 50%;
+}
+.box{
+    border-radius: 8px;
+    background: #FFF;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    padding: 20px;
+    margin: 20px;
+}
+.right-service {
+    width: 40%;
+}
+.left-service > .section-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 30px;
+}
+.right-service img{
+    width: 100%;
+}
+.service-batch{
+    background-color: #FF900E;
+    padding: 45px 40px;
+    width: 400px;
+    border-radius: 8px;
+    position: relative;
+    margin-left: -50px;
+    margin-top: -100px;
+}
+.service-batch h1{
+    font-size: 4rem;
+    font-weight: 700;
+}
+.service-batch h1, .service-batch p{
+    color: #fff;
+    text-align: center;
+}
+.service-batch p{
+    font-size: 1.5rem;
 }
